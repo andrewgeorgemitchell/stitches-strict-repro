@@ -68,8 +68,8 @@ export const Text = ({
 }: TextProps) => (
   <StyledBase
     variant={variant}
-    css={css} // This line seems to be what causes the slow down when not running in strict mode
-    // css={css as any} // This will fix slowdown
+    css={css} // This WILL cause slowdown with strict: false
+    // css={css as any} // This will NOT cause slowdown with strict: false
     gutterBottom={gutterBottom}
     truncate={truncate}
     as={as}
